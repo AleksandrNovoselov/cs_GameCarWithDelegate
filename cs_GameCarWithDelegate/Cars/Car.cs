@@ -2,7 +2,7 @@
 
 namespace cs_GameCarWithDelegate.Cars
 {
-    public delegate void CarEvent();
+    //public delegate void DelegateCar(string property);
 
     public abstract class Car
     {
@@ -10,12 +10,12 @@ namespace cs_GameCarWithDelegate.Cars
         public int Speed { get; protected set; }
         public int DownLimit { get; protected set; }
         public Random Rand { get; }
-        public float MoveDistanse { get; protected set; }
+        public double MoveDistanse { get; protected set; }
 
         public Car() => Rand = new Random();
 
         public abstract void Move();
 
-        public event CarEvent Finish;
+        //public virtual event DelegateCar FinishEvent;
     }
 }
